@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "stdio.h": "c",
+        "iostream": "cpp"
+    },
+    "github.copilot.editor.enableAutoCompletions": false,
+    "notebook.outline.showCodeCells": true,
+    "editor.fontSize": 20,
+    "terminal.integrated.suggest.runOnEnter": "exactMatch",
+    "terminal.integrated.focusAfterRun": "terminal",
+    "notebook.consolidatedRunButton": true,
+    "gradle.allowParallelRun": true,
+    "java.debug.settings.onBuildFailureProceed": true
+}

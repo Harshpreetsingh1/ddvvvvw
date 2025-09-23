@@ -1,0 +1,32 @@
+ Bitwise Operators
+- perform operations on the binary form of numbers
+- AND, OR , NOT
+- AND TRuth table-(&)
+0 0 =0
+0 1 = 0
+1 0=0
+1 1=1
+- OR TRuth table-(|)
+0 0 =0
+0 1 = 1 
+1 0=1
+1 1=1
+- XOR TRuth table-(|)
+0 0 =0
+0 1 = 1 
+1 0=1
+1 1=0
+- BITWISE LEFT SHIFT OPERATOR(<<)
+= Shifts Bit by i times.,
+n<<i; SHIFTS BITS OF n To the left i times 
+
+VALUE of N INCREASES
+a<<b= a*2^b
+- BITWISE RIGHT SHIFT OPERATOR(>>)
+= Shifts Bit by i times,
+n<<i; SHIFTS BITS OF n To the Right by i times 
+VALUE OF N DECREASES
+a<<b= a*2^b
+
+
+

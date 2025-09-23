@@ -1,0 +1,76 @@
+            Emerging and disruptive technologies
+                        Gartner(Analytics company)
+
+
+Experiment 1- Code upload using Arduino will Decide the blinking of LEd
+Experiment 2- Weather monitoring system Using Ubidots.
+Experiment 3- Blinking LED using MObile APP
+
+
+ESP32
+- A microcontroller that has inbuilt wifi(Board)
+-32- 32bit
+-38 pins
+
+ 
+ This ibuilt wifi is its advantage over arduino
+ 
+ UBidots- Online IoT Cloude based sofware 
+Zip files are used to Optimise data sharing
+
+Red LED- 1.8 to 2.2 volts
+general value = 2volts
+        - 20mA
+White LED- 3 volts
+Benjamin franklin
+
+forward  voltage of LED varies with the input current
+lower potential is ground
+
+Enable button Runs the code that is in the memory
+
+Boot Button runs a fresh code via USB cable
+
+
+
+Weather monitoring system
+Sensor- BMP 280 
+        - 6 pins
+                - VCC,GND,SDA,SCL,CSB(Chips(for multiple devices comm)), SDO(Serial Data output)
+       There are 2 protocols-
+       1  I2C- Inter integrated Circuit
+                - 2 wire protocol
+                - data signal(SDA) and clock(SCL)
+
+
+
+#Pin D22- SCL pin of ESP 32
+#Pin D21- SDA pin of ESP 32
+        Clock Signal
+        -In ESP- Clock Signal is in Megahertz
+                -Clock Signal syncs the units across the board
+
+MQTT- rule for connecting IoT devices(Message queing Telemetry Transport )
+
+(In case of Alexa type devices)
+Broker(Ubidots) in our process.
+Publisher(sender of data to cloud)[Mobile]
+Subscriber(Reciever of Data)[EsP32]
+
+
+
+MQTT topic- A keyword that heirarchly arranges or filters the data
+( Like In Gen AI, In the prompt , every word is converted into the tokens.And based on these tokens, 
+The bot decide which is the accurate Response)
+
+MQTT- It publishes Message that certain topic into the ESP32 Board
+
+
+All Non Zero values are true  in boolean datatype
+
+
+
+Experiment - 5
+TOols used - Blipar(Augmented Reality)
+Marker- Tells about the AR inside the project(Basically A face that tells what is there in AR)
+

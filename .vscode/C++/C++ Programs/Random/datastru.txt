@@ -1,0 +1,9 @@
+Data Structure:
+It stores Data
+Types- 
+1 Linear
+- Array
+2 Hierarchial
+Array - The first Data Structure To study
+  - The array name is a pointer in C++ by default
+Algorithm- Ways To efficiently Manage Data
