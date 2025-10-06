@@ -12,7 +12,7 @@ class Node {
     }
 };
 
-Node* insert(Node* root, int key) {
+void insert(Node* root, int key) {
     if (root == nullptr) return new Node(key);
     if (key < root->data)
         root->left = insert(root->left, key);
