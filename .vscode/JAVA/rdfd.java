@@ -44,7 +44,7 @@ class RD extends Deposit {
 }
 
 // Main class
-public class exp3 {
+public class rdfd {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
