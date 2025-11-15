@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-// Base class Deposit
 class Deposit {
     int accountId;
     String name;
@@ -15,7 +13,7 @@ class Deposit {
     }
 }
 
-// FD class inheriting Deposit
+
 class FD extends Deposit {
     double rateOfInterestFD;
 
@@ -29,7 +27,7 @@ class FD extends Deposit {
     }
 }
 
-// RD class inheriting Deposit
+
 class RD extends Deposit {
     double rateOfInterestRD;
 
@@ -39,7 +37,12 @@ class RD extends Deposit {
     }
 
     public double calculateInterest() {
-        return (principal * tenure * (tenure + 1) / 2) * (rateOfInterestRD / 100);
+      
+        int months = tenure * 12;
+       
+        double monthlyRate = rateOfInterestRD / 100 / 12;
+       
+        return principal * months * (months + 1) / 2 * monthlyRate;
     }
 }
 
@@ -51,10 +54,10 @@ public class rdfd {
         System.out.println("Enter account details:");
         System.out.print("Account ID: ");
         int accountId = sc.nextInt();
-        sc.nextLine(); // Consume newline
+        sc.nextLine(); 
         System.out.print("Name: ");
         String name = sc.nextLine();
-        System.out.print("Principal Amount: ");
+        System.out.print("Principal Amount (for FD) / Monthly Deposit (for RD): ");
         double principal = sc.nextDouble();
         System.out.print("Tenure (in years): ");
         int tenure = sc.nextInt();
