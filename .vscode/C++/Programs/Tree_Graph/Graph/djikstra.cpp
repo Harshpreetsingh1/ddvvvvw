@@ -3,7 +3,7 @@
 
 using namespace std;
 
-const int V = 5;
+const int V=5;
 const int INF = numeric_limits<int>::max();
 
 int minDistance(int dist[], bool sptSet[]){
