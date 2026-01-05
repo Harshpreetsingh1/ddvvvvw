@@ -4,7 +4,6 @@
 using namespace std;
 
 const int V=5;
-const int INF = numeric_limits<int>::max();
 
 int minDistance(int dist[], bool sptSet[]){
     int min = INF;
@@ -12,10 +11,10 @@ int minDistance(int dist[], bool sptSet[]){
     for(int v=0; v<V; ++v){
         if(!sptSet[v] && dist[v] <= min){
             min = dist[v];
-            min_index = v;
+            minindex = v;
         }
     }
-    return min_index;
+    return minindex;
 }
 
 void printSolution(int dist[]){
