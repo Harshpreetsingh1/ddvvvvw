@@ -1,7 +1,7 @@
 #include <iostream>
 #include<vector>
 #include<list>
-#include<stack>//defined class for stack
+#include<stack>
 #define SIZE 5
 
 class STACK{

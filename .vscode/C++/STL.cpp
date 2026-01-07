@@ -5,6 +5,7 @@ using namespace std;
 // Containers,Iterators,Algorithms,Functors
 
 // Vector-Dynamic datatype
+
 int main() {
 vector<int> vec;
 vector<int> vec1(vec);//Copy array
