@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator & Nutrition Plan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BMI Calculator & Nutrition Plan</h1>
+            <p>Calculate your Body Mass Index and get a personalized nutrition plan.</p>
+        </header>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="weight">Weight</label>
+                <div class="input-wrapper">
+                    <input type="number" id="weight" placeholder="Enter weight">
+                    <select id="weight-unit">
+                        <option value="kg">kg</option>
+                        <option value="lbs">lbs</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="height">Height</label>
+                <div class="input-wrapper">
+                    <input type="number" id="height" placeholder="Enter height">
+                    <select id="height-unit">
+                        <option value="cm">cm</option>
+                        <option value="ft">ft</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="calculate-btn">Calculate BMI</button>
+        </div>
+
+        <div id="result-section" class="hidden">
+            <div class="card result-card">
+                <h2>Your BMI</h2>
+                <div id="bmi-value">--</div>
+                <div id="bmi-category">--</div>
+            </div>
+
+            <div class="card nutrition-card">
+                <h2>Nutrition Plan & Tips</h2>
+                <div id="nutrition-content">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
