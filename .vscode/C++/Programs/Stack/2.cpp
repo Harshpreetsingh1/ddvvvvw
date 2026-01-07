@@ -1,10 +1,12 @@
 #include<iostream>
+using namespace std;
 class Stack {
     int top;
     int* arr;
     int size;
 
-public:
+public:+
+
     Stack(int s) {
         size = s;
         arr = new int[size];
@@ -13,26 +15,26 @@ public:
 
     void push(int x) {
         if (top == size - 1) {
-            cout << "Stack Overflow" << endl;
+            cout << "stack overflow" << endl;
         } else {
             arr[++top] = x;
-            cout << "Pushed: " << x << endl;
+            cout << "pushed: " << x << endl;
         }
     }
 
     void pop() {
         if (top == -1) {
-            cout << "Stack Underflow" << endl;
+            cout << "stack underflow" << endl;
         } else {
-            cout << "Popped: " << arr[top--] << endl;
+            cout << "popped: " << arr[top--] << endl;
         }
     }
 
     void peek() {
         if (top == -1) {
-            cout << "Stack is empty" << endl;
+            cout << "stack is empty" << endl;
         } else {
-            cout << "Top element: " << arr[top] << endl;
+            cout << "top element: " << arr[top] << endl;
         }
     }
 
@@ -51,10 +53,8 @@ public:
    
 };
 
-using namespace std;
 
 int main() {
-    //cout << "Hello, World!" << endl;
 Stack s(5);
 s.push(1);
 s.push(2);
