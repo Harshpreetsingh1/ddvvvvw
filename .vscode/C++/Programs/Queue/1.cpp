@@ -3,14 +3,14 @@
 #include<deque>
 using namespace std;
 
-// class Node{
-// int data;
-// Node* next;
-// Node(val){
-//     int val=data;
-//     next=NULL;
-// }
-// };
+ class Node{
+ int data;
+ Node* next;
+ Node(val){
+     int val=data;
+     next=NULL;
+ }
+ };
 class cirqueue{
  int* arr;
  int cursize,cap;
@@ -18,8 +18,8 @@ class cirqueue{
  public:
  cirqueue(int size){
     cursize=0;
-    cap= size;//size becomes the capacity of queue
-    arr = new int[cap];// creates a new memory array in heap dynamically
+    cap= size;
+    arr = new int[cap];
     f=0;
     r=-1;
 }
@@ -57,42 +57,42 @@ void print(){
 }
 };
 
-// class Queue{
-//     Node* head;
-//     Node* tail;
+ class Queue{
+     Node* head;
+     Node* tail;
 
-//     public:
-//     Queue(){
-//         head=tail=NULL;
-//     }
-//     void push(int val){
-//          Node* newnode=new Node(val);
-//          if(empty()){
-//             head=tail=newnode;
-//          }else(){
-//             tail->next=newnode;
-//             tail=newnode;
-//             newnode->next=NULL;
-//          }
+     public:
+     Queue(){
+         head=tail=NULL;
+     }
+     void push(int val){
+          Node* newnode=new Node(val);
+          if(empty()){
+             head=tail=newnode;
+          }else(){
+             tail->next=newnode;
+             tail=newnode;
+             newnode->next=NULL;
+          }
         
 
-//     }
-//     int pop(){
-//         if(empty()){
-//             cout<<"LL is empty";
-//             return -1;
-//         }
-//         Node* temp = head;
-//         head= head->next;
-//         delete temp;
-//     }
-//     int front(){
+     }
+     int pop(){
+         if(empty()){
+             cout<<"LL is empty";
+             return -1;
+         }
+         Node* temp = head;
+         head= head->next;
+         delete temp;
+     }
+     int front(){
        
-//     }
-//     bool empty(){
-//         return head=NULL;
-//     }
-// };
+     }
+     bool empty(){
+         return head=NULL;
+     }
+ };
 int main() {
     cirqueue cq(3);
     cq.push(1);
