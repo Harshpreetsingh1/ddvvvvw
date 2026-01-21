@@ -689,12 +689,28 @@ button {
         flex-direction: column;
     }
 
+    /* Make hero image visible and responsive on tablets */
     .hero-decorative {
-        display: none;
+        margin-top: var(--spacing-xl);
+        width: 100%;
+    }
+
+    .hero-image-container {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        margin: 0 auto;
     }
 
     .about-content {
         flex-direction: column;
+    }
+
+    .about-image-container {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+        margin: var(--spacing-lg) auto 0;
     }
 }
 
@@ -725,6 +741,30 @@ button {
         flex-direction: column;
         gap: var(--spacing-lg);
     }
+
+    /* Adjust image sizes for mobile */
+    .hero-image-container {
+        width: 100%;
+        max-width: 280px;
+        height: 280px;
+    }
+
+    .about-image-container {
+        width: 100%;
+        max-width: 280px;
+        height: 320px;
+    }
+
+    /* Adjust geometric accents for smaller screens */
+    .geometric-accent {
+        width: 150px;
+        height: 150px;
+    }
+
+    .geometric-accent-about {
+        width: 140px;
+        height: 140px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -738,5 +778,33 @@ button {
 
     .section-title {
         font-size: 1.5rem;
+    }
+
+    /* Further reduce image sizes for small mobile */
+    .hero-image-container {
+        width: 100%;
+        max-width: 240px;
+        height: 240px;
+    }
+
+    .about-image-container {
+        width: 100%;
+        max-width: 240px;
+        height: 280px;
+    }
+
+    /* Reduce geometric accent sizes */
+    .geometric-accent {
+        width: 120px;
+        height: 120px;
+        top: -15px;
+        left: -15px;
+    }
+
+    .geometric-accent-about {
+        width: 110px;
+        height: 110px;
+        bottom: -10px;
+        left: -10px;
     }
 }
