@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.color-picker-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#colorPicker {
+    width: 60px;
+    height: 50px;
+    border: 3px solid #2196F3;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#colorPicker:hover {
+    transform: scale(1.05);
+}
+
+#colorPicker:active {
+    transform: scale(0.95);
+}
+
+.color-picker-container label {
+    font-weight: 500;
+    color: #555;
+}
+
+.undo-btn {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.undo-btn:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+.undo-btn:active {
+    transform: translateY(0);
+}
+
+.undo-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.canvas-container {
+    background: #f8f9fa;
+    border: 3px dashed #dee2e6;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.canvas-container:hover {
+    border-color: #2196F3;
+}
+
+#svgCanvas {
+    width: 100%;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    cursor: crosshair;
+    display: block;
+}
+
+.counter {
+    text-align: center;
+}
+
+.counter p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 500;
+}
+
+#circleCount {
+    color: #2196F3;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .controls {
+        justify-content: center;
+    }
+    
+    .undo-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .counter p {
+        font-size: 1rem;
+    }
+    
+    #circleCount {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    #colorPicker {
+        width: 50px;
+        height: 40px;
+    }
+}
+
+/* Circle animation */
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.new-circle {
+    animation: popIn 0.3s ease-out;
+}

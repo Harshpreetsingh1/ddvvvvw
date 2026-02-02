@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #b0b0b0;
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #c0c0c0;
+}
+
+.output-section {
+    margin-top: 40px;
+    background: #0f1419;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.textarea-wrapper {
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    min-height: 250px;
+    background: rgba(30, 41, 59, 0.8);
+    border: 2px solid rgba(71, 85, 105, 0.6);
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+textarea::placeholder {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    background: rgba(30, 41, 59, 0.95);
+}
+
+.counter-display {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 1rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+#charCount {
+    color: #3b82f6;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+#charCount.warning {
+    color: #f59e0b;
+}
+
+#charCount.danger {
+    color: #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    textarea {
+        min-height: 200px;
+        font-size: 1rem;
+    }
+}
