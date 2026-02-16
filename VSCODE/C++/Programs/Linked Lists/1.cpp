@@ -10,7 +10,6 @@ class Node{// General class for Node which can be dynamically created.
         next=NULL;// pointer to the next node
     }
 };
-
 class List{
     
     Node* head;// head node created
