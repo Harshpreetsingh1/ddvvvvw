@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .total-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .change {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .positive {
+            color: #27ae60;
+        }
+
+        .negative {
+            color: #e74c3c;
+        }
+
+        .portfolio-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+
+        .add-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .add-btn:hover {
+            background: #5a6fd8;
+        }
+
+        .portfolio-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .portfolio-table th,
+        .portfolio-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .portfolio-table th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .portfolio-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .symbol {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .delete-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .delete-btn:hover {
+            background: #c0392b;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .submit-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #5a6fd8;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .chart-placeholder {
+            height: 300px;
+            background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+                        linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .portfolio-table {
+                font-size: 0.9rem;
+            }
+            
+            .portfolio-table th,
+            .portfolio-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📈 Portfolio Tracker</h1>
+            <p>Track your investments and watch your wealth grow</p>
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <h3>Total Portfolio Value</h3>
+                <div class="total-value" id="totalValue">$0.00</div>
+                <div class="change positive" id="totalChange">+$0.00 (+0.00%)</div>
+            </div>
+            <div class="card">
+                <h3>Today's Performance</h3>
+                <div class="total-value" id="todayPerformance">$0.00</div>
+                <div class="change positive" id="todayChange">+0.00%</div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <div class="section-header">
+                <h2>Your Holdings</h2>
+                <button class="add-btn" onclick="openModal()">+ Add Investment</button>
+            </div>
+            <table class="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Shares</th>
+                        <th>Avg Price</th>
+                        <th>Current Price</th>
+                        <th>Total Value</th>
+                        <th>Gain/Loss</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="portfolioTable">
+                    <!-- Portfolio data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="chart-container">
+            <h3>Portfolio Performance</h3>
+            <div class="chart-placeholder">
+                📊 Chart visualization coming soon...
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Investment Modal -->
+    <div id="investmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add New Investment</h2>
+            <form id="investmentForm">
+                <div class="form-group">
+                    <label for="symbol">Symbol (e.g., AAPL, TSLA)</label>
+                    <input type="text" id="symbol" required placeholder="Enter stock symbol">
+                </div>
+                <div class="form-group">
+                    <label for="name">Company Name</label>
+                    <input type="text" id="name" required placeholder="Enter company name">
+                </div>
+                <div class="form-group">
+                    <label for="shares">Number of Shares</label>
+                    <input type="number" id="shares" step="0.01" required placeholder="Enter number of shares">
+                </div>
+                <div class="form-group">
+                    <label for="avgPrice">Average Price per Share</label>
+                    <input type="number" id="avgPrice" step="0.01" required placeholder="Enter average price">
+                </div>
+                <button type="submit" class="submit-btn">Add Investment</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Sample data - in a real app, this would come from an API
+        let portfolio = [
+            {
+                symbol: 'AAPL',
+                name: 'Apple Inc.',
+                shares: 10,
+                avgPrice: 150.00,
+                currentPrice: 175.50
+            },
+            {
+                symbol: 'TSLA',
+                name: 'Tesla Inc.',
+                shares: 5,
+                avgPrice: 200.00,
+                currentPrice: 220.75
+            },
+            {
+                symbol: 'MSFT',
+                name: 'Microsoft Corporation',
+                shares: 8,
+                avgPrice: 300.00,
+                currentPrice: 325.25
+            }
+        ];
+
+        // Initialize the portfolio
+        function initPortfolio() {
+            updatePortfolioTable();
+            updateDashboard();
+        }
+
+        // Update portfolio table
+        function updatePortfolioTable() {
+            const tableBody = document.getElementById('portfolioTable');
+            tableBody.innerHTML = '';
+
+            portfolio.forEach((item, index) => {
+                const totalValue = item.shares * item.currentPrice;
+                const totalCost = item.shares * item.avgPrice;
+                const gainLoss = totalValue - totalCost;
+                const gainLossPercent = ((gainLoss / totalCost) * 100);
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="symbol">${item.symbol}</td>
+                    <td>${item.name}</td>
+                    <td>${item.shares}</td>
+                    <td>$${item.avgPrice.toFixed(2)}</td>
+                    <td>$${item.currentPrice.toFixed(2)}</td>
+                    <td>$${totalValue.toFixed(2)}</td>
+                    <td class="${gainLoss >= 0 ? 'positive' : 'negative'}">
+                        ${gainLoss >= 0 ? '+' : ''}$${gainLoss.toFixed(2)} (${gainLossPercent.toFixed(2)}%)
+                    </td>
+                    <td>
+                        <button class="delete-btn" onclick="deleteInvestment(${index})">Delete</button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Update dashboard values
+        function updateDashboard() {
+            let totalValue = 0;
+            let totalCost = 0;
+
+            portfolio.forEach(item => {
+                totalValue += item.shares * item.currentPrice;
+                totalCost += item.shares * item.avgPrice;
+            });
+
+            const totalGainLoss = totalValue - totalCost;
+            const totalGainLossPercent = totalCost > 0 ? ((totalGainLoss / totalCost) * 100) : 0;
+
+            document.getElementById('totalValue').textContent = `$${totalValue.toFixed(2)}`;
+            document.getElementById('totalChange').textContent = 
+                `${totalGainLoss >= 0 ? '+' : ''}$${totalGainLoss.toFixed(2)} (${totalGainLossPercent.toFixed(2)}%)`;
+            document.getElementById('totalChange').className = `change ${totalGainLoss >= 0 ? 'positive' : 'negative'}`;
+
+            // Simulate today's performance (random for demo)
+            const todayChange = (Math.random() - 0.5) * 1000;
+            const todayPercent = (Math.random() - 0.5) * 10;
+            
+            document.getElementById('todayPerformance').textContent = `${todayChange >= 0 ? '+' : ''}$${Math.abs(todayChange).toFixed(2)}`;
+            document.getElementById('todayChange').textContent = `${todayPercent >= 0 ? '+' : ''}${todayPercent.toFixed(2)}%`;
+            document.getElementById('todayChange').className = `change ${todayPercent >= 0 ? 'positive' : 'negative'}`;
+        }
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('investmentModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('investmentModal').style.display = 'none';
+            document.getElementById('investmentForm').reset();
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('investmentModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('investmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const symbol = document.getElementById('symbol').value.toUpperCase();
+            const name = document.getElementById('name').value;
+            const shares = parseFloat(document.getElementById('shares').value);
+            const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+
+            // Simulate current price (in real app, this would come from API)
+            const currentPrice = avgPrice * (0.8 + Math.random() * 0.4);
+
+            const newInvestment = {
+                symbol: symbol,
+                name: name,
+                shares: shares,
+                avgPrice: avgPrice,
+                currentPrice: currentPrice
+            };
+
+            portfolio.push(newInvestment);
+            updatePortfolioTable();
+            updateDashboard();
+            closeModal();
+        });
+
+        // Delete investment
+        function deleteInvestment(index) {
+            if (confirm('Are you sure you want to delete this investment?')) {
+                portfolio.splice(index, 1);
+                updatePortfolioTable();
+                updateDashboard();
+            }
+        }
+
+        // Simulate real-time price updates
+        function simulatePriceUpdates() {
+            portfolio.forEach(item => {
+                // Simulate price movement (±5%)
+                const change = (Math.random() - 0.5) * 0.1;
+                item.currentPrice = item.currentPrice * (1 + change);
+            });
+            updatePortfolioTable();
+            updateDashboard();
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initPortfolio();
+            
+            // Update prices every 30 seconds (simulating real-time data)
+            setInterval(simulatePriceUpdates, 30000);
+        });
+    </script>
+</body>
+</html>

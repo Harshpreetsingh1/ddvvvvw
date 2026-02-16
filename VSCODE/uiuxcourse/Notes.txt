@@ -1,0 +1,40 @@
+UI UX course 
+
+    UI= Bridge or mediating Device Between Information and user.
+        How User gets to the Information
+
+        and how the user gets to the information decides the 
+        the information user gets.
+
+        Medium is the message.
+        like structure of stories decides what information is used or not.
+
+    The Interface Shapes the experience.
+
+Relation between UI and UX
+    UI - How it looks(Viusal design),Interface
+        form , aesthetics, look and feel , organisation
+            Design Driven
+
+    UX- How it feels(Non Visual Design),Experience
+        Feel, navigation, story, structure
+            User Driven
+    
+Roles in UI/UX
+ Front end= UI design
+ testing+ideation= UX  design
+ Back End= Coding
+   These overlap for a dynamic website or an app.
+
+
+Interface Conventions
+    Feedback is important for interaction
+    Interaction should be seemless(speed and ease)
+    Undo/Redo button is neccessary.
+
+    Arrangement or organisation of keys is a key to a good interface 
+    for example- The screen of the calculator is at the top 
+    to avoid any hinderance in watching the feedback given by touching keys.
+
+
+   

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>1. Aim</h1>
+        <p>To create a dynamic product filter that sorts items based on dropdown selection.</p>
+
+        <h2>2. Objectives</h2>
+        <ul>
+            <li>Implement filterable product data</li>
+            <li>Create sortable dropdown UI</li>
+            <li>Add responsive product cards</li>
+            <li>Animate layout transitions</li>
+        </ul>
+
+        <h2>3. Hardware/Software Requirements</h2>
+        <ul>
+            <li>Same as Experiment 1</li>
+        </ul>
+
+        <h2>4. About the Program</h2>
+        <p>Demonstrates array manipulation, React state management, and CSS Grid layouts for responsive product
+            displays.</p>
+
+        <div class="output-section">
+            <h3>Output:</h3>
+
+            <div class="product-filter-wrapper">
+                <h1 class="filter-title">Product Filter</h1>
+
+                <div class="filter-controls">
+                    <label for="categoryFilter">Filter by:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Products</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="home">Home & Garden</option>
+                    </select>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

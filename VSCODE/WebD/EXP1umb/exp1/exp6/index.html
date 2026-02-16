@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Drawing Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>SVG Drawing Tool</h1>
+
+        <div class="controls">
+            <div class="color-picker-container">
+                <input type="color" id="colorPicker" value="#2196F3">
+                <label for="colorPicker">Color</label>
+            </div>
+
+            <button id="undoBtn" class="undo-btn">Undo</button>
+        </div>
+
+        <div class="canvas-container">
+            <svg id="svgCanvas" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet">
+                <!-- Circles will be drawn here -->
+            </svg>
+        </div>
+
+        <div class="counter">
+            <p>Circles drawn: <span id="circleCount">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

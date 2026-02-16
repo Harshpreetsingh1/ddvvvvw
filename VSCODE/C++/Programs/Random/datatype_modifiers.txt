@@ -1,0 +1,17 @@
+DATA TYPE MODifiers
+change meaning of data types
+TYPES:
+Long- `Increases the size of datatypes by the size >=4 bytes
+= Syntax- long datatype;`
+SHort
+`DEcreases the size of datatypes by the half of size of the datatype
+
+= Syntax- short datatype;`
+
+long Long- `Increases the size of datatypes by the size >=8 bytes
+= Syntax- long long datatype;`
+signed= Can store both Positive and negative values 
+
+unsigned= Can store only positive values
+
+

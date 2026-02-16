@@ -1,0 +1,34 @@
+Vectors 
+-is another data structure similar to array
+STL - standard Template Library
+All the implemenatations of data structure
+One tool under STL is 
+- Vectors
+In an Array , The size is fixed-
+Vectors are dynamically resized
+Vectors are dynamically resized arrays
+
+In vectors = A special type of loop is used - 
+- for each loop
+
+Static vs Dynamic Allocation of memory allocation
+
+- Static Memory is allocated at the compile time
+  for example - in int  a[5];
+  size 5 is declared in compile time.
+  - It is allocated in stack memory
+
+
+- Dynamic Memory is allocated at  the run time 
+   - In vectors, The memory is allocated at run time that why it is Dynamically allocated
+   - that Is why  it can be resized easily and this is an advantage of vectors over arrays
+   - It  is allocated in heap memory
+
+
+   Vectors has two properties
+   - Size property - Number of elements the vector has
+   - Capacity property - Number of elements the vector can store
+
+Generally the containers in C++ are pass by value .
+   To make it pass by reference . We use "&" to make it pass by reference
+    

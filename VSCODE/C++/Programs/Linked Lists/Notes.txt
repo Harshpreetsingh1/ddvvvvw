@@ -1,0 +1,42 @@
+                         (Linked Lists)  
+         Linear Data Structure 
+    Individual Boxes called nodes which are connected
+                like chains.
+
+    Linked Lists Is Dynamic in nature-Nodes can be added or deleted at runtime.
+        Linked list is used in Stack and Queue
+
+        Used in browser for tabs(for connection between the pages we are surfing)
+        
+
+
+
+
+    Difference between Linked List, Arrays:
+    arrays are contigous data memory - Memory  has continous values
+    Linked Lists- Doesnt Specially have contingous memory. (because they are stored in heap memory and are connected through pointers.)
+
+    Each node has different address and doesn't follow 
+    any required pattern.
+
+
+
+
+    Nodes are connected through pointers.
+    1 Node= data+(pointer of next node)
+    pointer of next node for the connection.
+
+
+
+ Linked list can only be traversed one by one since nodes are
+    nodes are interconnected by pointers.
+
+
+    Head pointer is used for accessing Nodes.
+        It  points to the adress of the first node.
+    Tail Pointer can also be used for the same task.
+        It  points to the address of the last node.
+    1D linked list- only the next address is known not the previous one.
+    2D linked list- previous and next, both adress are known.
+
+

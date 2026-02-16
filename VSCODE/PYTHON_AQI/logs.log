@@ -1,0 +1,6 @@
+2025-03-12 15:19:35,972:WARNING:C:\Users\2036h\AppData\Local\Temp\ipykernel_14964\1987346425.py:8: SyntaxWarning: invalid escape sequence '\V'
+  df_day = pd.read_csv('C:\VS CODE PROGRAMS\.vscode\PYTHON_AQI\city_day.csv')
+
+2025-03-12 15:19:35,972:WARNING:C:\Users\2036h\AppData\Local\Temp\ipykernel_14964\1987346425.py:9: SyntaxWarning: invalid escape sequence '\V'
+  df_hour = pd.read_csv('C:\VS CODE PROGRAMS\.vscode\PYTHON_AQI\city_hour.csv')
+

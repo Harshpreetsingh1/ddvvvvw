@@ -1,0 +1,200 @@
+Difference between Science and engineering
+- Science is the study of nature to analyse
+- While engineering is the application of that study to create useful things
+- Scientists wonder and engineeres solve
+- engineeres use scientific knowledge to solve problems
+- So they both overlap
+
+
+Comparison between Eye and a Camera
+    -Eye is an organ while camera is an equipment
+    -Camera is a type of eye created by humans in an effort of mimicing human eye.
+
+
+        -Similarities- An eye and a camera both have lenses and light sensitive surfaces
+        Iris- Lens of eye.
+        Camera lens- Lens used in camera to focus
+
+        Retina is a light sensitive surface which sends "impulses" captured by our eye to our brains 
+            through "optic nerves"
+            which then processes the information.The image recieved is  inverted.
+            The Human eye contains small muscles that contract and relax and this allows the eyes to change shape and stay focused  on a moving object.
+
+            Camera lens cannot do it.(They Change lenses) 
+
+
+        In a Camera , the aperture controls the amount of light entering like iris in our eye.
+        Then Light makes its way to a light sensitive surface which was a film but today this surface is an imaging sensor chip.
+    
+   Similarities in anatomy- 
+    Camera- Eye
+
+    Film- Retina
+    Diaphragm- iris
+    aperture- Pupil
+    Lens- Lens(cornea)
+    Black paint- Choroid
+
+    Cornea- Cap of the eye(Transparent jelly )Has a spherical curvature.
+
+    Lens- It is also transparent and sits at the front of the body of camera
+    (also has a spherical curvature)
+    These curvature allows for the eye and camera to view, though not in focus, a limited area to both the right and the left .
+
+
+    Both the eye and camera can adjust the quantity of light entering 
+    In camera- aperture
+    In eye- Pupil and iris
+
+
+    Focus- Human and camera lenses both focus an inverted image onto light sensitive surface
+    Both have the ability of auto focus which focuses on one object and blurs the other.
+
+    Both have limited scope and field of view
+    because the curvature of the eye and lens allow them to take image of what is not in front of them.
+    But eye has fixed field of view but Of Camera, it can change.
+
+    Retina contain two type of photoreceptors- 
+    Cones and rods
+    Rods (allow to see in low light)(Cats have more cone like eyes thats why they can see in dark efficiently)
+    Cones(allow us to see colour)
+
+    Camera has photoreceptors but they only have one type.
+    THey respond to RGB Lights only and they are evenly distributed across the lens
+    while in Retina, The cones are at the center of retina without rods.
+
+
+Comparison between bird and camera
+    `Birds{
+        Streamlined shapes( for reduction in air drag)
+        Glossy body ( for reduced air drag)
+
+    }
+    Airplanes[human made birds]{
+        also have Streamlined bodies(for the obvious reasons)
+        Polished surfaces(Cmon , I dont want to repeat it.)
+
+    }
+
+    Early Draft of Aircraft(with Wings flapping )
+
+    Similarities{
+        Structure(streamlined)
+        Made of light materials - light bones and feathers 
+         Wings(Redbull also has them)
+         Front part is also pointed of both 
+
+         {Techniques-
+         Can glide for long distances(no or minimal Energy used)
+         Helicopters hover as birds do . 
+         Diving Techniques also shown in Airshows
+
+
+         }
+         Movement in the Air{
+            Plane uses Different movable parts
+            and birds also use it.(for direction purposes)
+            For controlling horizons across vertical and horizontal positions
+
+         }
+         Flight pattern of V shape{
+            They Both Fly in V shape when in flock
+            (aids in collaboration
+            - Reason - 
+            It adds more Energy to the group
+            for extra miles covered)
+            keep changing positions  in the stack, which helps them go for long distances.
+            Same thing is used in jet and airshows.
+            This saves upto 15% of jet fuel in Vshape
+
+         }
+     Landing-
+     Both gain and lose elevation with the variation of drag and lift force.
+
+      Both of them control their landing process by the use of their motion controllers.
+      Birds usually generate a resistance by flapping their wings while the Aircraft move the ailerions , elevator and apply brakes
+      
+    }
+ 
+ Need for biology in engineering-
+ Engineers should know basic Bio to know and apply this knowledge in real life scenarios.
+ So that they can better interact and better understand the biosystems, their problems 
+ and provide apt solutions.
+
+
+ Bio engineering  is the application of principles of bio and the tools of engineering to create 
+ Efficient products for use case.
+
+    These engineers attempt to mimic bio systems to solve a real world problem and 
+    and better solve the problems using these natured mechanisms .
+
+
+    Biommicry involves the translation of knowledge obtained from the natural world into new innovations .
+
+    When We are able to learn from natural things like the coconut or the wind and make real world products that mimics their design.
+    This is called bio Inspired design.
+    Natural lessons can be translated into new ideas and innovations in products, lifestyle and organizational forms.
+
+    Biommicry or biomimetics
+    Toys which replicate human movement,
+    Prosthetics and neurilink.
+
+    Examples of Bio design
+    whale:Wind turbine
+
+    Humpback Whale(-36 tonnes(Excellent swimmer)){
+
+        Excellent swimmer{
+      (tubercles)  This helps them reduce drag and be an excellent swimmer.
+         because of the Of the bumpy protrusions(Extended part of whale outside body)
+         Arrangement of these angles increases or decreases their lift .
+         scientists studied this and applied on wind turbines and it increased the Efficiency by almost 40 percent.\
+
+
+        }}
+    BoxFish:Bionic car
+
+    Boxfish{
+        low flow resistance and a drag coefficient of 0.06.
+        Penguins- 0.19
+        
+        Inspired by this- Mercedes developed Bionic Car.{
+            Lower fuel consumption, low weight and great rigidity
+        }
+    }
+
+        Bird Safe Glass-
+        {
+            Many birds die by hitting into the glass.
+            Scientists from Ornilux  made a glass that reflects UV strands which birds see and avoid saving their lives
+
+
+        }
+    Kingfisher and the Shinkansen{
+        Japan inspired from the kingfisher 
+        and developed The Shinkansen with long beak to not create sonic boom while emerging from tunnels.
+
+         This reduces the noise of the train and also consumes 15 percent less electricity and travels 10 percent faster.
+
+
+
+    }
+    Butterfly and solar cell{
+
+        The rose Butterfly has tiny cells on its intricate and delicate wings that collect light at any angle.
+
+        The black wings of the rose butterfly have inspired a new type 
+        of solar cell that is two times more Efficient in harvesting light.
+        
+    }
+
+Biology= (bios-life)+(logos-dicoursal)
+
+    The three laws of Thermo-
+    1 The energy cannot be created nor destroyed
+    2 The entropy of a system always increases
+    3 Absolute temperature cannot be achieved
+    
+
+
+    

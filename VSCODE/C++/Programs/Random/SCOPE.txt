@@ -1,0 +1,10 @@
+SCOPE
+-Area for accessing and using the variables in memory
+Types- 
+1 LOCAL SCOPe
+-VARIABLES DECLARED IN 
+if else,LOOPS, functions, inside{} can oNly be used in those specific Block OF codes.
+2 Global Scope
+-  VARIABLES THAT ARE accessible in the whole file and can be used in the whole file also
+
+

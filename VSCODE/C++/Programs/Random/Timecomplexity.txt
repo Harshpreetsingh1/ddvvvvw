@@ -1,0 +1,55 @@
+Time and Space Complexity
+- It is the amount of time taken as a function of input size.
+f(n)=0(n){n is the input size}
+and this is pronounced as big of n .
+Time Complexity tells the behaviour of the algorithm depending on the number of operations
+It is always calculated for the worst case scenarios. In which Algorithm can run on billions of cases and performs its operations efficiently
+
+Benefits- To Make Most Efficient algorithm
+- To compare two algorithms
+
+Big O - a notation for the time and space Complexity
+Gives the worst case Complexity or the upper bound upto which the algorithm can perform worstly
+
+
+   
+//    Some common time complexities
+
+
+//  Big of n= O(1){constant time complexities}
+// Example
+// Sum of numbers from 1 to N
+// Graph is parallel to X axis
+
+
+
+// O(n){Linear time complexity}
+// Examples = Kadane's Algo
+// - N factorial
+// - Nth fibonacci
+
+
+O(n^2) & O(n^3)
+ For example 
+ Bubble sort- NEsted loops
+
+
+ O(logn)
+ for example 
+ The programs in which the size reduces constantly by a factor
+ Binary search 
+
+O(nlogn)
+for example 
+sortings
+merge sort
+quicksort
+greedy algos
+
+O(2^n)(Exponential)
+{Very Bad Time complexity}
+And is found in recursion questions
+
+O(n!)
+Very Very Very Bad time complexity
+It is not so common

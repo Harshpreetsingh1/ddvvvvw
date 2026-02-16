@@ -1,0 +1,30 @@
+Maximum Subarray Sum 
+- Subarray  
+A part of an array that is continous
+ for example- 
+  int arr[4]= {1,2,3,4};
+    subarrays can be
+      {1,2,3},{2,3},{1,2}    
+      number of subarrays= n*(n+1)/2
+      n= number of elements in an array
+There are multiple approaches to solve MAximum Subarray sum but 
+    The most famous are brute force and Kadane algorithm
+     - Brute Force calculates all the sum and compares them to find max
+     - Kadane's algorithm- It works on the Intution that if the sum of any subarrays is negative,
+      reset it to zero  because it is better to add zero to a number than to add a negative number.
+
+Pair Sum - return pair in sorted array with given target sum as question
+for example - 
+{2,7,11,15}
+return target sum 9
+
+for(int i=0;i<n;i++){
+  for(int j=0;j<n;j++){
+    if(){
+      j=0;
+    }
+    else{
+      count1++;
+    }
+  }
+}

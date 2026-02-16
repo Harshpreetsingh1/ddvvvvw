@@ -1,0 +1,59 @@
+OOPS-
+    Encapsulation- Wrapping up of data and member functions in a single unit called class
+        Helps in data hiding with the help of data modifiers
+
+    Constructor- Special method invoked automatically at time of object creation. Used for Initialization
+         Same name as class
+         Doesnt have a return type 
+         only called once at object creation (automatically)
+         Memory allocation happens when constructor is called    
+   types- 
+  1 non paramterized 
+  2 parameterized
+  3 copy 
+   
+   Constructor Overloading-(Type of Polymorphism)
+   when multiple type of same name but different function
+   constructor are present in the same code.
+   
+
+    Abstraction- providing only essentials details and hide only internal details
+    Inheritance- Process by which object of one class acquires the property of another class
+    Polymorphism- Ability to take multiple forms
+
+
+Destructor- Dealllocate memory 
+            Compiler automatically creates a Destructor at the end of the program 
+            to free up the memory given at construction.
+            (It only Dealllocate statically allocated memory)
+            (For Dynamically allocated memory , delete keyword is used)
+
+
+
+            Inheritance -
+            When Properties & member functions of base class are passed on to the derived class
+
+            Used for Code Reusability
+
+            First Parent class constructor is called
+            then derived class constructor is called
+
+            When the code finishes
+            first derived class destructor is called
+            then parent class destructor is called
+
+    There are 3 Modes of Inheritance-
+            Derived Class   Derived Class   Derived Class
+Base Class-Private Mode     Protected Mode  Public Mode
+
+Private   - Not Inherited   Not Inherited   Not Inherited
+
+Protected- Private          Protected       Protected
+
+Public-     Private         Protected       Public
+
+
+Types Of Inheritance-
+    1 Multi Level Inheritance-
+    2 Multiple Inheritance
+
