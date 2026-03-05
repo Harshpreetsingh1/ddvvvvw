@@ -1,6 +1,5 @@
 import { body, validationResult } from 'express-validator';
 
-// Validation rules for employee creation/update
 const employeeValidationRules = () => {
   return [
     body('name')
@@ -67,7 +66,6 @@ const employeeValidationRules = () => {
   ];
 };
 
-// Middleware to handle validation errors
 const validate = (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {

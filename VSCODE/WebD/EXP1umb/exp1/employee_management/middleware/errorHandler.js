@@ -1,4 +1,3 @@
-// Error handling middleware
 const errorHandler = (err, req, res, next) => {
   const status = err.status || 500;
   const message = err.message || 'Internal Server Error';
@@ -12,7 +11,6 @@ const errorHandler = (err, req, res, next) => {
   });
 };
 
-// Not Found middleware
 const notFound = (req, res, next) => {
   const error = new Error(`Not Found - ${req.originalUrl}`);
   res.status(404).render('error', {

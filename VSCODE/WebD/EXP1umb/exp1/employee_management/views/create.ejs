@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <!-- Navigation Bar -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand fw-bold" href="/">
@@ -36,13 +36,13 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
+    
     <div class="container mt-4">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h1 class="mb-4">➕ Add New Employee</h1>
 
-                <!-- Error Message -->
+                
                 <% if (typeof error !=='undefined' && error) { %>
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                         ⚠️ <%= error %>
@@ -50,7 +50,7 @@
                     </div>
                     <% } %>
 
-                        <!-- Form -->
+                        
                         <form action="/employees" method="POST" class="needs-validation" novalidate>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -140,7 +140,7 @@
                                 </div>
                             </div>
 
-                            <!-- Form Actions -->
+                            
                             <div class="d-flex gap-2 mt-4">
                                 <button type="submit" class="btn btn-primary btn-lg">
                                     ✓ Add Employee
@@ -154,7 +154,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <p class="mb-0">© 2026 Employee Management System | Built with Node.js, Express & MongoDB</p>
     </footer>

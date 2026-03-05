@@ -1,11 +1,5 @@
 import Employee from '../models/Employee.js';
 
-/**
- * Controller for Employee Management
- * Implements CRUD operations with MVC pattern
- */
-
-// GET - Display all employees
 const getAllEmployees = async (req, res) => {
   try {
     const employees = await Employee.find().sort({ createdAt: -1 });
@@ -23,19 +17,17 @@ const getAllEmployees = async (req, res) => {
   }
 };
 
-// GET - Show create employee form
 const getCreateForm = (req, res) => {
   res.render('create', {
     title: 'Add New Employee'
   });
 };
 
-// POST - Create a new employee
 const createEmployee = async (req, res) => {
   try {
     const { name, email, empId, department, designation, salary, phone, address, city, state } = req.body;
 
-    // Check if employee with same email or empId already exists
+    
     const existingEmployee = await Employee.findOne({
       $or: [{ email }, { empId }]
     });
@@ -71,7 +63,6 @@ const createEmployee = async (req, res) => {
   }
 };
 
-// GET - Show single employee details
 const getEmployeeById = async (req, res) => {
   try {
     const employee = await Employee.findById(req.params.id);
@@ -96,7 +87,6 @@ const getEmployeeById = async (req, res) => {
   }
 };
 
-// GET - Show edit employee form
 const getEditForm = async (req, res) => {
   try {
     const employee = await Employee.findById(req.params.id);
@@ -121,7 +111,6 @@ const getEditForm = async (req, res) => {
   }
 };
 
-// PUT - Update employee information
 const updateEmployee = async (req, res) => {
   try {
     const { name, email, empId, department, designation, salary, phone, address, city, state } = req.body;
@@ -135,7 +124,7 @@ const updateEmployee = async (req, res) => {
       });
     }
 
-    // Check if new email or empId is already taken by another employee
+    
     const duplicateCheck = await Employee.findOne({
       $and: [
         { _id: { $ne: req.params.id } },
@@ -151,7 +140,7 @@ const updateEmployee = async (req, res) => {
       });
     }
 
-    // Update employee fields
+    
     employee = Object.assign(employee, {
       name,
       email,
@@ -178,7 +167,6 @@ const updateEmployee = async (req, res) => {
   }
 };
 
-// DELETE - Delete an employee
 const deleteEmployee = async (req, res) => {
   try {
     const employee = await Employee.findByIdAndDelete(req.params.id);
@@ -200,7 +188,6 @@ const deleteEmployee = async (req, res) => {
   }
 };
 
-// GET - Search employees
 const searchEmployees = async (req, res) => {
   try {
     const { query } = req.query;
