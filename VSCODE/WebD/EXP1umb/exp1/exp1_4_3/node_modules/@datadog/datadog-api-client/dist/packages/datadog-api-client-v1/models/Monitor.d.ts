@@ -1,0 +1,121 @@
+/**
+ * Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+ * This product includes software developed at Datadog (https://www.datadoghq.com/).
+ * Copyright 2020-Present Datadog, Inc.
+ */
+import { Creator } from "./Creator";
+import { MatchingDowntime } from "./MatchingDowntime";
+import { MonitorAsset } from "./MonitorAsset";
+import { MonitorDraftStatus } from "./MonitorDraftStatus";
+import { MonitorOptions } from "./MonitorOptions";
+import { MonitorOverallStates } from "./MonitorOverallStates";
+import { MonitorState } from "./MonitorState";
+import { MonitorType } from "./MonitorType";
+import { AttributeTypeMap } from "../../datadog-api-client-common/util";
+/**
+ * Object describing a monitor.
+ */
+export declare class Monitor {
+    /**
+     * The list of monitor assets tied to a monitor, which represents key links for users to take action on monitor alerts (for example, runbooks).
+     */
+    "assets"?: Array<MonitorAsset>;
+    /**
+     * Timestamp of the monitor creation.
+     */
+    "created"?: Date;
+    /**
+     * Object describing the creator of the shared element.
+     */
+    "creator"?: Creator;
+    /**
+     * Whether or not the monitor is deleted. (Always `null`)
+     */
+    "deleted"?: Date;
+    /**
+     * Indicates whether the monitor is in a draft or published state.
+     *
+     * `draft`: The monitor appears as Draft and does not send notifications.
+     * `published`: The monitor is active and evaluates conditions and notify as configured.
+     *
+     * This field is in preview. The draft value is only available to customers with the feature enabled.
+     */
+    "draftStatus"?: MonitorDraftStatus;
+    /**
+     * ID of this monitor.
+     */
+    "id"?: number;
+    /**
+     * A list of active v1 downtimes that match this monitor.
+     */
+    "matchingDowntimes"?: Array<MatchingDowntime>;
+    /**
+     * A message to include with notifications for this monitor.
+     */
+    "message"?: string;
+    /**
+     * Last timestamp when the monitor was edited.
+     */
+    "modified"?: Date;
+    /**
+     * Whether or not the monitor is broken down on different groups.
+     */
+    "multi"?: boolean;
+    /**
+     * The monitor name.
+     */
+    "name"?: string;
+    /**
+     * List of options associated with your monitor.
+     */
+    "options"?: MonitorOptions;
+    /**
+     * The different states your monitor can be in.
+     */
+    "overallState"?: MonitorOverallStates;
+    /**
+     * Integer from 1 (high) to 5 (low) indicating alert severity.
+     */
+    "priority"?: number;
+    /**
+     * The monitor query.
+     */
+    "query": string;
+    /**
+     * A list of unique role identifiers to define which roles are allowed to edit the monitor. The unique identifiers for all roles can be pulled from the [Roles API](https://docs.datadoghq.com/api/latest/roles/#list-roles) and are located in the `data.id` field. Editing a monitor includes any updates to the monitor configuration, monitor deletion, and muting of the monitor for any amount of time. You can use the [Restriction Policies API](https://docs.datadoghq.com/api/latest/restriction-policies/) to manage write authorization for individual monitors by teams and users, in addition to roles.
+     */
+    "restrictedRoles"?: Array<string>;
+    /**
+     * Wrapper object with the different monitor states.
+     */
+    "state"?: MonitorState;
+    /**
+     * Tags associated to your monitor.
+     */
+    "tags"?: Array<string>;
+    /**
+     * The type of the monitor. For more information about `type`, see the [monitor options](https://docs.datadoghq.com/monitors/guide/monitor_api_options/) docs.
+     */
+    "type": MonitorType;
+    /**
+     * A container for additional, undeclared properties.
+     * This is a holder for any undeclared properties as specified with
+     * the 'additionalProperties' keyword in the OAS document.
+     */
+    "additionalProperties"?: {
+        [key: string]: any;
+    };
+    /**
+     * @ignore
+     */
+    "_unparsed"?: boolean;
+    /**
+     * @ignore
+     */
+    static readonly attributeTypeMap: AttributeTypeMap;
+    /**
+     * @ignore
+     */
+    static getAttributeTypeMap(): AttributeTypeMap;
+    constructor();
+}

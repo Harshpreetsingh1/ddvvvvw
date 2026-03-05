@@ -1,0 +1,23 @@
+/**
+ * Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+ * This product includes software developed at Datadog (https://www.datadoghq.com/).
+ * Copyright 2020-Present Datadog, Inc.
+ */
+import { UnparsedObject } from "../../datadog-api-client-common/util";
+/**
+ * Data source for event platform-based queries.
+ */
+export declare type FormulaAndFunctionEventsDataSource = typeof LOGS | typeof SPANS | typeof NETWORK | typeof RUM | typeof SECURITY_SIGNALS | typeof PROFILES | typeof AUDIT | typeof EVENTS | typeof CI_TESTS | typeof CI_PIPELINES | typeof INCIDENT_ANALYTICS | typeof PRODUCT_ANALYTICS | typeof ON_CALL_EVENTS | UnparsedObject;
+export declare const LOGS = "logs";
+export declare const SPANS = "spans";
+export declare const NETWORK = "network";
+export declare const RUM = "rum";
+export declare const SECURITY_SIGNALS = "security_signals";
+export declare const PROFILES = "profiles";
+export declare const AUDIT = "audit";
+export declare const EVENTS = "events";
+export declare const CI_TESTS = "ci_tests";
+export declare const CI_PIPELINES = "ci_pipelines";
+export declare const INCIDENT_ANALYTICS = "incident_analytics";
+export declare const PRODUCT_ANALYTICS = "product_analytics";
+export declare const ON_CALL_EVENTS = "on_call_events";

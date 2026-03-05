@@ -1,0 +1,71 @@
+/**
+ * Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+ * This product includes software developed at Datadog (https://www.datadoghq.com/).
+ * Copyright 2020-Present Datadog, Inc.
+ */
+import { DashboardLayoutType } from "./DashboardLayoutType";
+import { AttributeTypeMap } from "../../datadog-api-client-common/util";
+/**
+ * Dashboard definition.
+ */
+export declare class DashboardSummaryDefinition {
+    /**
+     * Identifier of the dashboard author.
+     */
+    "authorHandle"?: string;
+    /**
+     * Creation date of the dashboard.
+     */
+    "createdAt"?: Date;
+    /**
+     * Description of the dashboard.
+     */
+    "description"?: string;
+    /**
+     * Dashboard identifier.
+     */
+    "id"?: string;
+    /**
+     * Whether this dashboard is read-only. If True, only the author and admins can make changes to it.
+     *
+     * This property is deprecated; please use the [Restriction Policies API](https://docs.datadoghq.com/api/latest/restriction-policies/) instead to manage write authorization for individual dashboards.
+     */
+    "isReadOnly"?: boolean;
+    /**
+     * Layout type of the dashboard.
+     */
+    "layoutType"?: DashboardLayoutType;
+    /**
+     * Modification date of the dashboard.
+     */
+    "modifiedAt"?: Date;
+    /**
+     * Title of the dashboard.
+     */
+    "title"?: string;
+    /**
+     * URL of the dashboard.
+     */
+    "url"?: string;
+    /**
+     * A container for additional, undeclared properties.
+     * This is a holder for any undeclared properties as specified with
+     * the 'additionalProperties' keyword in the OAS document.
+     */
+    "additionalProperties"?: {
+        [key: string]: any;
+    };
+    /**
+     * @ignore
+     */
+    "_unparsed"?: boolean;
+    /**
+     * @ignore
+     */
+    static readonly attributeTypeMap: AttributeTypeMap;
+    /**
+     * @ignore
+     */
+    static getAttributeTypeMap(): AttributeTypeMap;
+    constructor();
+}

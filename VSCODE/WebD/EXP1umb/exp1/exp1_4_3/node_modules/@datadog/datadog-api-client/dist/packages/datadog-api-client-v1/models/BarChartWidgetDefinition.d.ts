@@ -1,0 +1,70 @@
+/**
+ * Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+ * This product includes software developed at Datadog (https://www.datadoghq.com/).
+ * Copyright 2020-Present Datadog, Inc.
+ */
+import { BarChartWidgetDefinitionType } from "./BarChartWidgetDefinitionType";
+import { BarChartWidgetRequest } from "./BarChartWidgetRequest";
+import { BarChartWidgetStyle } from "./BarChartWidgetStyle";
+import { WidgetCustomLink } from "./WidgetCustomLink";
+import { WidgetTextAlign } from "./WidgetTextAlign";
+import { WidgetTime } from "./WidgetTime";
+import { AttributeTypeMap } from "../../datadog-api-client-common/util";
+/**
+ * The bar chart visualization displays categorical data using vertical bars, allowing you to compare values across different groups.
+ */
+export declare class BarChartWidgetDefinition {
+    /**
+     * List of custom links.
+     */
+    "customLinks"?: Array<WidgetCustomLink>;
+    /**
+     * List of bar chart widget requests.
+     */
+    "requests": [BarChartWidgetRequest];
+    /**
+     * Style customization for a bar chart widget.
+     */
+    "style"?: BarChartWidgetStyle;
+    /**
+     * Time setting for the widget.
+     */
+    "time"?: WidgetTime;
+    /**
+     * Title of your widget.
+     */
+    "title"?: string;
+    /**
+     * How to align the text on the widget.
+     */
+    "titleAlign"?: WidgetTextAlign;
+    /**
+     * Size of the title.
+     */
+    "titleSize"?: string;
+    /**
+     * Type of the bar chart widget.
+     */
+    "type": BarChartWidgetDefinitionType;
+    /**
+     * A container for additional, undeclared properties.
+     * This is a holder for any undeclared properties as specified with
+     * the 'additionalProperties' keyword in the OAS document.
+     */
+    "additionalProperties"?: {
+        [key: string]: any;
+    };
+    /**
+     * @ignore
+     */
+    "_unparsed"?: boolean;
+    /**
+     * @ignore
+     */
+    static readonly attributeTypeMap: AttributeTypeMap;
+    /**
+     * @ignore
+     */
+    static getAttributeTypeMap(): AttributeTypeMap;
+    constructor();
+}

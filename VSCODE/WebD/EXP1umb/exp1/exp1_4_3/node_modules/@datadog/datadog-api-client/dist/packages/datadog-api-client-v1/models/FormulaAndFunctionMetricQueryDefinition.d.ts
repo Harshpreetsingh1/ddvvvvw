@@ -1,0 +1,59 @@
+/**
+ * Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+ * This product includes software developed at Datadog (https://www.datadoghq.com/).
+ * Copyright 2020-Present Datadog, Inc.
+ */
+import { FormulaAndFunctionMetricAggregation } from "./FormulaAndFunctionMetricAggregation";
+import { FormulaAndFunctionMetricDataSource } from "./FormulaAndFunctionMetricDataSource";
+import { FormulaAndFunctionMetricSemanticMode } from "./FormulaAndFunctionMetricSemanticMode";
+import { AttributeTypeMap } from "../../datadog-api-client-common/util";
+/**
+ * A formula and functions metrics query.
+ */
+export declare class FormulaAndFunctionMetricQueryDefinition {
+    /**
+     * The aggregation methods available for metrics queries.
+     */
+    "aggregator"?: FormulaAndFunctionMetricAggregation;
+    /**
+     * The source organization UUID for cross organization queries. Feature in Private Beta.
+     */
+    "crossOrgUuids"?: Array<string>;
+    /**
+     * Data source for metrics queries.
+     */
+    "dataSource": FormulaAndFunctionMetricDataSource;
+    /**
+     * Name of the query for use in formulas.
+     */
+    "name": string;
+    /**
+     * Metrics query definition.
+     */
+    "query": string;
+    /**
+     * Semantic mode for metrics queries. This determines how metrics from different sources are combined or displayed.
+     */
+    "semanticMode"?: FormulaAndFunctionMetricSemanticMode;
+    /**
+     * A container for additional, undeclared properties.
+     * This is a holder for any undeclared properties as specified with
+     * the 'additionalProperties' keyword in the OAS document.
+     */
+    "additionalProperties"?: {
+        [key: string]: any;
+    };
+    /**
+     * @ignore
+     */
+    "_unparsed"?: boolean;
+    /**
+     * @ignore
+     */
+    static readonly attributeTypeMap: AttributeTypeMap;
+    /**
+     * @ignore
+     */
+    static getAttributeTypeMap(): AttributeTypeMap;
+    constructor();
+}

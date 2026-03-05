@@ -1,0 +1,47 @@
+"use strict";
+/**
+ * Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+ * This product includes software developed at Datadog (https://www.datadoghq.com/).
+ * Copyright 2020-Present Datadog, Inc.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IPPrefixesSynthetics = void 0;
+/**
+ * Available prefix information for the Synthetics endpoints.
+ */
+class IPPrefixesSynthetics {
+    constructor() { }
+    /**
+     * @ignore
+     */
+    static getAttributeTypeMap() {
+        return IPPrefixesSynthetics.attributeTypeMap;
+    }
+}
+exports.IPPrefixesSynthetics = IPPrefixesSynthetics;
+/**
+ * @ignore
+ */
+IPPrefixesSynthetics.attributeTypeMap = {
+    prefixesIpv4: {
+        baseName: "prefixes_ipv4",
+        type: "Array<string>",
+    },
+    prefixesIpv4ByLocation: {
+        baseName: "prefixes_ipv4_by_location",
+        type: "{ [key: string]: Array<string>; }",
+    },
+    prefixesIpv6: {
+        baseName: "prefixes_ipv6",
+        type: "Array<string>",
+    },
+    prefixesIpv6ByLocation: {
+        baseName: "prefixes_ipv6_by_location",
+        type: "{ [key: string]: Array<string>; }",
+    },
+    additionalProperties: {
+        baseName: "additionalProperties",
+        type: "{ [key: string]: any; }",
+    },
+};
+//# sourceMappingURL=IPPrefixesSynthetics.js.map

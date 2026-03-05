@@ -1,0 +1,70 @@
+/**
+ * Unless explicitly stated otherwise all files in this repository are licensed under the Apache-2.0 License.
+ * This product includes software developed at Datadog (https://www.datadoghq.com/).
+ * Copyright 2020-Present Datadog, Inc.
+ */
+import { TableWidgetDefinitionType } from "./TableWidgetDefinitionType";
+import { TableWidgetHasSearchBar } from "./TableWidgetHasSearchBar";
+import { TableWidgetRequest } from "./TableWidgetRequest";
+import { WidgetCustomLink } from "./WidgetCustomLink";
+import { WidgetTextAlign } from "./WidgetTextAlign";
+import { WidgetTime } from "./WidgetTime";
+import { AttributeTypeMap } from "../../datadog-api-client-common/util";
+/**
+ * The table visualization is available on timeboards and screenboards. It displays columns of metrics grouped by tag key.
+ */
+export declare class TableWidgetDefinition {
+    /**
+     * List of custom links.
+     */
+    "customLinks"?: Array<WidgetCustomLink>;
+    /**
+     * Controls the display of the search bar.
+     */
+    "hasSearchBar"?: TableWidgetHasSearchBar;
+    /**
+     * Widget definition.
+     */
+    "requests": Array<TableWidgetRequest>;
+    /**
+     * Time setting for the widget.
+     */
+    "time"?: WidgetTime;
+    /**
+     * Title of your widget.
+     */
+    "title"?: string;
+    /**
+     * How to align the text on the widget.
+     */
+    "titleAlign"?: WidgetTextAlign;
+    /**
+     * Size of the title.
+     */
+    "titleSize"?: string;
+    /**
+     * Type of the table widget.
+     */
+    "type": TableWidgetDefinitionType;
+    /**
+     * A container for additional, undeclared properties.
+     * This is a holder for any undeclared properties as specified with
+     * the 'additionalProperties' keyword in the OAS document.
+     */
+    "additionalProperties"?: {
+        [key: string]: any;
+    };
+    /**
+     * @ignore
+     */
+    "_unparsed"?: boolean;
+    /**
+     * @ignore
+     */
+    static readonly attributeTypeMap: AttributeTypeMap;
+    /**
+     * @ignore
+     */
+    static getAttributeTypeMap(): AttributeTypeMap;
+    constructor();
+}
