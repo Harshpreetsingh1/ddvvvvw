@@ -1,8 +1,5 @@
 import CategoryService from '../services/CategoryService.js';
 
-// Controller layer: glue between HTTP requests and service logic.
-// Handles request/response objects and error catching.
-
 export default class CategoryController {
   static async create(req, res) {
     try {

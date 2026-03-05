@@ -2,7 +2,6 @@ import ProductRepository from '../repositories/ProductRepository.js';
 
 export default class ProductService {
   static async createProduct(data) {
-    // business rules like price validation could go here
     return ProductRepository.create(data);
   }
 

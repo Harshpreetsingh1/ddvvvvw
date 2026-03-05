@@ -1,8 +1,5 @@
 import mongoose from 'mongoose';
 
-// Configuration layer: handles database connectivity.
-// This isolates connection logic from the rest of the application.
-
 const connectDB = async () => {
   try {
     const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/ecommerce';

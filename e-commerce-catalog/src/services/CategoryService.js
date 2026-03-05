@@ -1,17 +1,10 @@
 import CategoryRepository from '../repositories/CategoryRepository.js';
 
-// Service layer: contains business logic. It orchestrates multiple
-// repository calls and enforces rules (e.g. preventing cycles in the
-// category tree). Controllers use services to keep request handling
-// thin.
-
 export default class CategoryService {
     static async createCategory(data) {
-        // optional logic to attach the new category as a child of a parent
         const { parentId, ...rest } = data;
         const category = await CategoryRepository.create(rest);
 
-        // if a parentId was provided, update the parent document
         if (parentId) {
             const parent = await CategoryRepository.findById(parentId);
             if (!parent) {
@@ -33,7 +26,6 @@ export default class CategoryService {
     }
 
     static async deleteCategory(id) {
-        // remove reference from any parent
         const categories = await CategoryRepository.list({ subcategories: id });
         for (const parent of categories) {
             parent.subcategories = parent.subcategories.filter(

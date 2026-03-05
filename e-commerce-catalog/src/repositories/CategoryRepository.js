@@ -1,9 +1,5 @@
 import Category from '../models/Category.js';
 
-// Repository layer: encapsulates database operations. Services call
-// these methods rather than interacting with mongoose directly, which
-// makes it easier to mock or replace the data store in tests.
-
 export default class CategoryRepository {
     static async create(data) {
         const category = new Category(data);
