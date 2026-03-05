@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                👔 Employee Management System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/employees">All Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success btn-sm ms-2 text-white" href="/employees/create">
+                            ➕ Add Employee
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="mb-4">➕ Add New Employee</h1>
+
+                <!-- Error Message -->
+                <% if (typeof error !=='undefined' && error) { %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        ⚠️ <%= error %>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                    <% } %>
+
+                        <!-- Form -->
+                        <form action="/employees" method="POST" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required
+                                        placeholder="Enter employee full name">
+                                    <div class="invalid-feedback">Please provide a valid name.</div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required
+                                        placeholder="Enter work email">
+                                    <div class="invalid-feedback">Please provide a valid email.</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="empId" class="form-label">Employee ID *</label>
+                                    <input type="text" class="form-control" id="empId" name="empId" required
+                                        placeholder="e.g., EMP2024001">
+                                    <div class="invalid-feedback">Please provide a valid Employee ID.</div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="department" class="form-label">Department *</label>
+                                    <select class="form-select" id="department" name="department" required>
+                                        <option value="">-- Select Department --</option>
+                                        <option value="Engineering">Engineering</option>
+                                        <option value="Human Resources">Human Resources</option>
+                                        <option value="Finance">Finance</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="Operations">Operations</option>
+                                        <option value="IT Support">IT Support</option>
+                                        <option value="Legal">Legal</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a department.</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="designation" class="form-label">Designation *</label>
+                                    <input type="text" class="form-control" id="designation" name="designation" required
+                                        placeholder="e.g., Software Engineer">
+                                    <div class="invalid-feedback">Please provide a designation.</div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="salary" class="form-label">Salary (₹)</label>
+                                    <input type="number" class="form-control" id="salary" name="salary" min="0"
+                                        placeholder="Annual salary in INR">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number (10 digits) *</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required
+                                        placeholder="10-digit mobile number" pattern="[0-9]{10}">
+                                    <div class="invalid-feedback">Please provide a valid 10-digit phone number.</div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="address" class="form-label">Address *</label>
+                                    <input type="text" class="form-control" id="address" name="address" required
+                                        placeholder="Enter residential address">
+                                    <div class="invalid-feedback">Please provide an address.</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="city" class="form-label">City *</label>
+                                    <input type="text" class="form-control" id="city" name="city" required
+                                        placeholder="Enter city">
+                                    <div class="invalid-feedback">Please provide a city.</div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="state" class="form-label">State *</label>
+                                    <input type="text" class="form-control" id="state" name="state" required
+                                        placeholder="Enter state">
+                                    <div class="invalid-feedback">Please provide a state.</div>
+                                </div>
+                            </div>
+
+                            <!-- Form Actions -->
+                            <div class="d-flex gap-2 mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    ✓ Add Employee
+                                </button>
+                                <a href="/employees" class="btn btn-secondary btn-lg">
+                                    ✕ Cancel
+                                </a>
+                            </div>
+                        </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">© 2026 Employee Management System | Built with Node.js, Express & MongoDB</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

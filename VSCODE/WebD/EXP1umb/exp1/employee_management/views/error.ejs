@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                📚 Employee Management System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/employees">All Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-success btn-sm ms-2" href="/employees/create">
+                            ➕ Add Employee
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <h1 class="display-1 text-danger">⚠️</h1>
+                <h2 class="mb-3"><%= typeof status !== 'undefined' ? 'Error ' + status : 'Error' %></h2>
+                <p class="lead mb-4"><%= typeof message !== 'undefined' ? message : 'Something went wrong' %></p>
+
+                <!-- Display Validation Errors if any -->
+                <% if (typeof errors !== 'undefined' && errors && errors.length > 0) { %>
+                    <div class="alert alert-danger text-start mt-3">
+                        <h5>Validation Errors:</h5>
+                        <ul class="mb-0">
+                            <% errors.forEach(error => { %>
+                                <li>
+                                    <% if (error.msg) { %>
+                                        <%= error.msg %>
+                                        <% if (error.param) { %>
+                                            (Field: <%= error.param %>)
+                                        <% } %>
+                                    <% } else { %>
+                                        <%= error.message %>
+                                    <% } %>
+                                </li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                <% } %>
+
+                <!-- Action Buttons -->
+                <div class="mt-4">
+                    <a href="/employees" class="btn btn-primary btn-lg">
+                        ← Back to Dashboard
+                    </a>
+                    <a href="/" class="btn btn-secondary btn-lg">
+                        🏠 Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5" style="margin-top: 150px !important;">
+        <p class="mb-0">© 2026 Employee Management System | Built with Node.js, Express & MongoDB</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
