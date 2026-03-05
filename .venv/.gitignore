@@ -1,2 +1,8 @@
 WebD/mysql-enterprise-9.5.0_winx64_bundle/
-C:\VS CODE PROGRAMS\VSCODE\WebD\EXP1umb\exp1\exp1_4_3\node_modules
+node_modules/
+.env
+*.log
+dist/
+build/
+.vscode/
+.venv/

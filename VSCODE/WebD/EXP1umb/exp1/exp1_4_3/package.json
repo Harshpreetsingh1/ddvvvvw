@@ -1,0 +1,17 @@
+{
+    "name": "exp1_4_3",
+    "version": "1.0.0",
+    "description": "Concurrent Ticket Booking System",
+    "main": "booking-system.js",
+    "scripts": {
+        "start": "node booking-system.js",
+        "test:load": "artillery run test.yml"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "redis": "^4.6.10"
+    },
+    "devDependencies": {
+        "artillery": "^2.0.0-31"
+    }
+}
